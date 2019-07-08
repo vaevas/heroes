@@ -16,7 +16,7 @@
 <script>
 import heads from "./components/head.vue";
 import left from "./components/left.vue";
-import right from "./components/right.vue";
+import right from "./views/heros/right.vue";
 
 export default {
   name: "App",

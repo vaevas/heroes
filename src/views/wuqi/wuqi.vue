@@ -1,7 +1,8 @@
 <template>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <h2 class="sub-header">武器列表</h2>
-    <a class="btn btn-success" href="add.html">Add</a>
+    <!-- <a class="btn btn-success" href="add.html">Add</a> -->
+     <router-link to="/wuqi/addwuqi" class="btn btn-success">添加</router-link>
     <div class="table-responsive">
       <table class="table table-striped">
         <thead>
@@ -49,14 +50,23 @@ export default {
   },
   methods: {
     getcontent() {
-      axios.get("http://localhost:3000/heros").then(res => {
+     this.axios.get("heros").then(res => {
         const { status, data } = res;
 
         if (status == 200) {
           this.list = data;
         }
-      });
-    }
+      })
+    },
+       del(i) {
+      if (confirm("确定删除吗?")) {
+        this.axios.delete("heros/" + i).then(res => {
+          if (res.status == 200) {
+            this.getcontent();
+          }
+        });
+      }
+    },
   }
 };
 </script>

@@ -3,14 +3,14 @@
 					<ul class="nav nav-sidebar">
 					<router-link to="/list" tag="li">
 						<a>
-							Overview
+							英雄列表
 						</a>
 					</router-link>
 					<router-link to="/wuqi" tag="li">
-						<a>Reports</a>
+						<a>武器列表</a>
 					</router-link>
 					<router-link to="/zhuangbei" tag="li">
-						<a>Analytics</a>
+						<a>装备列表</a>
 					</router-link>
 					<router-link to="/Export" tag="li">
 						<a>Export</a>
@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-	name:'left',
+	
 }
 </script>
 <style>

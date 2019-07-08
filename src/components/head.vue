@@ -22,6 +22,6 @@
 </template>
 <script>
 export default {
-  name:'heads'
+  
 }
 </script>
