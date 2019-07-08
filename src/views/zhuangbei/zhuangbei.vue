@@ -1,6 +1,6 @@
 <template>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h2 class="sub-header">Hero List</h2>
+    <h2 class="sub-header">装备列表</h2>
     <a class="btn btn-success" href="add.html">Add</a>
     <div class="table-responsive">
       <table class="table table-striped">
@@ -16,8 +16,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr :key="item.id" v-for="(item) in list">
-            <td>{{item.id}}</td>
+          <tr :key="item.id" v-for="(item,index) in list">
+            <td>{{index+1}}</td>
             <td>{{item.name}}</td>
             <td>{{item.gender}}</td>
             <td>{{item.fath}}</td>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import axios from "../assets/axios.js";
+import axios from "../../assets/axios";
 export default {
   name: "right",
   data() {
@@ -48,30 +48,14 @@ export default {
     this.getcontent();
   },
   methods: {
-    del(i) {
-      if (confirm("确定删除吗?")) {
-        axios
-          .delete(
-            "https://www.easy-mock.com/mock/5d0cba0313563a7b47ce871c/itcast_wyz/heros/" +i)
-          .then(res => {
-            if (res.status == 200) {
-             this.getcontent();
-            }
-          });
-      }
-    },
     getcontent() {
-      axios
-        .get(
-          "https://www.easy-mock.com/mock/5d0cba0313563a7b47ce871c/itcast_wyz/heros"
-        )
-        .then(res => {
-          const { status, data } = res;
+      axios.get("http://localhost:3000/heros").then(res => {
+        const { status, data } = res;
 
-          if (status == 200) {
-            this.list = data.data.heros;
-          }
-        });
+        if (status == 200) {
+          this.list = data;
+        }
+      });
     }
   }
 };

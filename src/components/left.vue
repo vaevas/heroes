@@ -4,13 +4,12 @@
 					<router-link to="/list" tag="li">
 						<a>
 							Overview
-							<span class="sr-only">(current)</span>
 						</a>
 					</router-link>
-					<router-link to="/add" tag="li">
+					<router-link to="/wuqi" tag="li">
 						<a>Reports</a>
 					</router-link>
-					<router-link to="/edit" tag="li">
+					<router-link to="/zhuangbei" tag="li">
 						<a>Analytics</a>
 					</router-link>
 					<router-link to="/Export" tag="li">
