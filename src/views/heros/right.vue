@@ -7,7 +7,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>id</th>
+            <th>#</th>
             <th>姓名</th>
             <th>性别</th>
             <th>能力</th>

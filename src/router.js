@@ -17,7 +17,7 @@ const router = new VueRouter({
     { path: '/', redirect: '/list' },
     { name: 'hero', path: '/list', component: right },
     { name: 'wuqi', path: '/wuqi', component: wuqi },
-    { name: 'wuqi', path: '/wuqi/addwuqi', component: addwuqi },
+    { name: 'addwuqi', path: '/wuqi/addwuqi', component: addwuqi },
     { name: 'zhuangbei', path: '/zhuangbei', component: zhuangbei },
     { name: 'addzhuangbei', path: '/zhuangbei/addzhuangbei', component: addzhuangbei },
     { path: '/Export', component: Export },
