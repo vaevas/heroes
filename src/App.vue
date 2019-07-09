@@ -16,14 +16,13 @@
 <script>
 import heads from "./components/head.vue";
 import left from "./components/left.vue";
-import right from "./views/heros/right.vue";
 
 export default {
   name: "App",
   data() {
     return {};
   },
-  components: { heads, left, right }
+  components: { heads, left }
 };
 </script>
 
